@@ -58,28 +58,11 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-            line-height: 0.9;
-        }
-
-        .logo-main {
-            font-family: var(--font-title);
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            color: var(--text-main);
-        }
-
-        .logo-sub {
-            font-family: var(--font-text);
-            font-size: 0.75rem;
-            font-weight: 400;
-            letter-spacing: 4px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            margin-top: 2px;
+        /* Classe nova para a imagem da logo */
+        .logo-img {
+            height: 45px;
+            width: auto;
+            display: block;
         }
 
         .btn-glow {
@@ -100,8 +83,39 @@
             box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
         }
 
+        /* ESTILOS DA FAIXA ANIMADA (MARQUEE) */
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            background: var(--surface);
+            padding: 15px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            margin-top: 85px; /* Empurra para baixo do header fixo */
+        }
+
+        .marquee-inner {
+            display: flex;
+            white-space: nowrap;
+            animation: scroll 25s linear infinite;
+        }
+
+        .marquee-item {
+            color: var(--primary);
+            font-weight: 700;
+            padding: 0 40px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
         .hero {
-            padding: 160px 0 80px 0;
+            padding: 60px 0 80px 0; /* Ajustado devido à faixa animada */
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
@@ -326,12 +340,20 @@
 <body>
 
     <header>
-        <div class="logo-container">
-            <span class="logo-main">MOLINARI</span>
-            <span class="logo-sub">Marketing</span>
-        </div>
+        <!-- Inserção da Logo da Melissa -->
+        <img src="logo-molinari.png.PNG" alt="Molinari Marketing" class="logo-img">
         <a href="https://wa.me/5511974035643?text=Ol%C3%A1%20Melissa%2C%20vi%20seu%20site%20e%20quero%20alavancar%20minha%20marca!" target="_blank" class="btn-glow">Fale Conosco</a>
     </header>
+
+    <!-- Faixa Animada com os Serviços -->
+    <div class="marquee">
+        <div class="marquee-inner">
+            <div class="marquee-item">• Gestão de redes sociais • Videomaker • Tráfego pago • Estratégias digitais</div>
+            <div class="marquee-item">• Gestão de redes sociais • Videomaker • Tráfego pago • Estratégias digitais</div>
+            <div class="marquee-item">• Gestão de redes sociais • Videomaker • Tráfego pago • Estratégias digitais</div>
+            <div class="marquee-item">• Gestão de redes sociais • Videomaker • Tráfego pago • Estratégias digitais</div>
+        </div>
+    </div>
 
     <div class="container">
         <!-- Hero Section -->
@@ -342,7 +364,6 @@
                 <a href="#portfolio" class="btn-glow" style="display: inline-block;">Explorar o Portfólio</a>
             </div>
 
-            <!-- Ajuste no enquadramento (object-position: center 30%) -->
             <div class="img-wrapper hero-img-wrapper">
                 <img src="image_9d31e6.jpg" style="object-position: center 30%;" alt="Melissa Molinari">
             </div>
@@ -351,7 +372,6 @@
         <!-- Seção: Sobre a Melissa -->
         <section class="about-section">
             <div class="img-wrapper" style="height: 100%; min-height: 400px; border-radius: 30px 0 0 30px; border: none;">
-                <!-- Ajuste da extensão para .png -->
                 <img src="foto-mel-sobre.png" style="object-position: center 20%;" alt="Melissa Molinari - Sobre">
             </div>
             <div class="about-text">
