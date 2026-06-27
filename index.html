@@ -46,7 +46,6 @@
         }
 
         header {
-            /* Reduzido o padding vertical para acomodar a logo maior sem estourar o cabeçalho */
             padding: 10px 24px;
             display: flex;
             justify-content: space-between;
@@ -57,13 +56,17 @@
             backdrop-filter: blur(15px);
             z-index: 100;
             border-bottom: 1px solid var(--border);
+            height: 90px; /* Altura fixa para o header */
         }
 
-        /* Classe ajustada para aumentar o tamanho da logo */
+        /* AJUSTE BRUTO PARA AUMENTAR A LOGO */
         .logo-img {
-            height: 85px; 
+            height: 140px; /* Aumentado drasticamente */
             width: auto;
             display: block;
+            margin: -25px 0; /* Margem negativa para não empurrar o botão para baixo */
+            transform: scale(1.4); /* Escala extra para forçar o zoom */
+            transform-origin: left center;
         }
 
         .btn-glow {
@@ -92,22 +95,22 @@
             padding: 15px 0;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
-            margin-top: 105px; /* Empurrado um pouco mais para baixo devido à nova altura do cabeçalho */
+            margin-top: 90px; /* Alinhado exatamente com o final do header */
         }
 
         .marquee-inner {
             display: flex;
             white-space: nowrap;
-            animation: scroll 30s linear infinite; /* Deixei levemente mais lento para leitura */
+            animation: scroll 30s linear infinite; 
         }
 
         .marquee-item {
             color: var(--primary);
             font-weight: 700;
-            padding: 0 60px; /* Mais espaço entre os blocos repetidos */
             font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 2px; /* Respiro entre as letras */
+            letter-spacing: 2px; 
+            padding-right: 15px; /* Ajuste fino de borda */
         }
 
         @keyframes scroll {
@@ -346,13 +349,13 @@
         <a href="https://wa.me/5511974035643?text=Ol%C3%A1%20Melissa%2C%20vi%20seu%20site%20e%20quero%20alavancar%20minha%20marca!" target="_blank" class="btn-glow">Fale Conosco</a>
     </header>
 
-    <!-- Faixa Animada com espaçamento extra inserido no código html -->
+    <!-- Faixa Animada com espaçamento cirurgicamente padronizado -->
     <div class="marquee">
         <div class="marquee-inner">
-            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;•</div>
-            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;•</div>
-            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;•</div>
-            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;•</div>
+            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;</div>
         </div>
     </div>
 
