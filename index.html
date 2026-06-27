@@ -46,7 +46,8 @@
         }
 
         header {
-            padding: 20px 24px;
+            /* Reduzido o padding vertical para acomodar a logo maior sem estourar o cabeçalho */
+            padding: 10px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -58,9 +59,9 @@
             border-bottom: 1px solid var(--border);
         }
 
-        /* Classe nova para a imagem da logo */
+        /* Classe ajustada para aumentar o tamanho da logo */
         .logo-img {
-            height: 45px;
+            height: 85px; 
             width: auto;
             display: block;
         }
@@ -91,22 +92,22 @@
             padding: 15px 0;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
-            margin-top: 85px; /* Empurra para baixo do header fixo */
+            margin-top: 105px; /* Empurrado um pouco mais para baixo devido à nova altura do cabeçalho */
         }
 
         .marquee-inner {
             display: flex;
             white-space: nowrap;
-            animation: scroll 25s linear infinite;
+            animation: scroll 30s linear infinite; /* Deixei levemente mais lento para leitura */
         }
 
         .marquee-item {
             color: var(--primary);
             font-weight: 700;
-            padding: 0 40px;
+            padding: 0 60px; /* Mais espaço entre os blocos repetidos */
             font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px; /* Respiro entre as letras */
         }
 
         @keyframes scroll {
@@ -115,7 +116,7 @@
         }
 
         .hero {
-            padding: 60px 0 80px 0; /* Ajustado devido à faixa animada */
+            padding: 60px 0 80px 0; 
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
@@ -345,13 +346,13 @@
         <a href="https://wa.me/5511974035643?text=Ol%C3%A1%20Melissa%2C%20vi%20seu%20site%20e%20quero%20alavancar%20minha%20marca!" target="_blank" class="btn-glow">Fale Conosco</a>
     </header>
 
-    <!-- Faixa Animada com os Serviços -->
+    <!-- Faixa Animada com espaçamento extra inserido no código html -->
     <div class="marquee">
         <div class="marquee-inner">
-            <div class="marquee-item">• Gestão de redes sociais • Videomaker • Tráfego pago • Estratégias digitais</div>
-            <div class="marquee-item">• Gestão de redes sociais • Videomaker • Tráfego pago • Estratégias digitais</div>
-            <div class="marquee-item">• Gestão de redes sociais • Videomaker • Tráfego pago • Estratégias digitais</div>
-            <div class="marquee-item">• Gestão de redes sociais • Videomaker • Tráfego pago • Estratégias digitais</div>
+            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;•</div>
+            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;•</div>
+            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;•</div>
+            <div class="marquee-item">Gestão de redes sociais &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Videomaker &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Tráfego pago &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Estratégias digitais &nbsp;&nbsp;&nbsp;•</div>
         </div>
     </div>
 
